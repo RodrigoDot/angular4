@@ -7,13 +7,18 @@
 
 ## Cloning the repository using console
 
-- Clone ``git clone git@github.com:erikfig/angular2-webpack-skeleton.git``
+- Clone ``git clone https://github.com/erikfig/angular2-webpack-skeleton.git``
 - ``cd angular2-webpack-skeleton``
 - remove .git repository
-- ``npm isntall``
+- ``npm install``
 
 
-## Cloning the repository using Ng2Install (better)
+## Cloning the repository using Ng2Install (Isn't working)
 
 - Run ``npm install -g ng2-install``
 - Run ``ng2-install``
+
+
+## Running the application
+
+-
