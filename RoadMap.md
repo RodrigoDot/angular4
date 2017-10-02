@@ -1,5 +1,7 @@
 # Angular 4
 
+- This project is the result of the course that I'm doing at School of Net
+
 ## Requirements
 
 - Node.js
@@ -21,4 +23,17 @@
 
 ## Running the application
 
--
+- ``npm start``
+
+
+## The main files
+
+- ``/public/css/style.css`` The base css
+- ``/src/app/app.component.html`` The default template
+- ``/src/app/app.component.css`` The default css
+- ``/src/app/app.component.ts`` The config file that loads all components
+
+
+## Creating the theme
+
+- Install twitter bootstrap ``npm install --save bootstrap`` 
