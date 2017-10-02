@@ -9,7 +9,8 @@ const appRoutes: Routes = [
 
 @NgModule({
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes)
   ],
   declarations: [
     AppComponent
@@ -18,3 +19,6 @@ const appRoutes: Routes = [
 })
 
 export class AppModule { }
+
+
+19.00 continuacao
