@@ -3,6 +3,8 @@ import { BrowserModule }  from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 
+import { ProductsModule } from '../products/products.module';
+
 const appRoutes: Routes = [
   {path: '', redirectTo: '/produtos', pathMatch: 'full'}
 ];
@@ -10,15 +12,13 @@ const appRoutes: Routes = [
 @NgModule({
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    ProductsModule
   ],
   declarations: [
     AppComponent
   ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [AppComponent]
 })
 
 export class AppModule { }
-
-
-19.00 continuacao

@@ -38,4 +38,4 @@
 
 - Install twitter bootstrap ``npm install --save bootstrap``
 - Go to ``/arc/app/app.component.ts``
-- And add ``import 'bootstrap/dist/css/bootstrap.css';`` at the top of the file 
+- And add ``import 'bootstrap/dist/css/bootstrap.css';`` at the top of the file
