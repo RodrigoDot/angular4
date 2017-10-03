@@ -2,23 +2,27 @@ import { NgModule } from '@angular/core';
 import { BrowserModule }  from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
+import { HttpModule } from '@angular/http';
 
-import { ProductsModule } from '../products/products.module';
+import { PropertiesModule } from '../properties/properties.module';
 
 const appRoutes: Routes = [
-  {path: '', redirectTo: '/produtos', pathMatch: 'full'}
+  {path: '', redirectTo: '/properties', pathMatch: 'full'}
 ];
 
 @NgModule({
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    ProductsModule
+    PropertiesModule,
+    HttpModule
   ],
   declarations: [
     AppComponent
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ]
 })
 
 export class AppModule { }
