@@ -33,4 +33,22 @@ export class AppHttpService {
       })
   }
 
+  view(id: number) {
+    let url = this.url + '/' +  id;
+
+    let myHeaders = new Headers({
+      'Accept': 'application/vnd.api+json'
+    });
+
+    let options = new RequestOptions({
+        headers: myHeaders
+    });
+
+    return this.http.get(url, options)
+      .toPromise()
+      .then((res) => {
+        return res.json() || {};
+      })
+  }
+
 }
