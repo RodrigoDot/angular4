@@ -7,18 +7,20 @@
     <tr>
       <th>#</th>
       <th>Titulo</th>
+      <th>Descricao</th>
+      <th>Valor</th>
       <th>Acao</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>1</td>
-      <td>Item</td>
+    <tr *ngFor="let propertie of properties">
+      <td>{{propertie.id}}</td>
+      <td>{{propertie.attributes.title}}</td>
+      <td>{{propertie.attributes.description}}</td>
+      <td>R$ {{propertie.attributes.value}}</td>
       <td>
-        <a href="" class="btn btn-info">Ver</a>
+        <a [routerLink]="[+ propertie.id]" class="btn btn-info">Ver</a>
       </td>
     </tr>
   </tbody>
 </table>
-
-{{properties}}

@@ -16,7 +16,6 @@ export class PropertiesComponent {
       .list()
       .then((res) => {
         this.properties = res.data;
-        console.log(res.data);
       })
   }
 }
