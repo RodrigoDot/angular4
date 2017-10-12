@@ -1,6 +1,6 @@
-<h3>Produtos</h3>
+<h3>Detalhes do Imovel</h3>
 
-<a href="" class="btn btn-primary">Novo Produto</a>
+<a [routerLink]="['/']" class="btn btn-primary">Lista de Imoveis</a>
 
 <table class="table table-hover">
   <thead>
@@ -22,6 +22,19 @@
       <td>{{propertieType.title}}</td>
       <td>{{propertieDistrict.title}}</td>
       <td>R$ {{propertie.value}}</td>
+      <td>
+        <a class="btn btn-primary" [routerLink]="[]">
+          <i class="fa fa-pencil-square-o"></i>
+          Editar
+        </a>
+        <a class="btn btn-danger" [routerLink]="[]">
+          <i class="fa fa-trash-o"></i>
+          Remover
+        </a>
+      </td>
     </tr>
   </tbody>
 </table>
+
+
+50 min

@@ -1,6 +1,6 @@
-<h3>Produtos</h3>
+<h3>Imoveis</h3>
 
-<a href="" class="btn btn-primary">Novo Produto</a>
+<a href="" class="btn btn-primary">Novo Imovel</a>
 
 <table class="table table-hover">
   <thead>
@@ -19,7 +19,10 @@
       <td>{{propertie.attributes.description}}</td>
       <td>R$ {{propertie.attributes.value}}</td>
       <td>
-        <a [routerLink]="['/properties/' + propertie.id]" class="btn btn-info">Ver</a>
+        <a [routerLink]="['/properties/' + propertie.id]" class="btn btn-info">
+          <i class="fa fa-info-circle"></i>
+          Ver
+        </a>
       </td>
     </tr>
   </tbody>

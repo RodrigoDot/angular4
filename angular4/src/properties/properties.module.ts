@@ -5,6 +5,7 @@ import { AppHttpService } from '../app/app-http.service';
 
 import { PropertiesComponent } from './properties.component';
 import { PropertiesViewComponent } from './properties-view.component';
+import { PropertiesEditComponent } from './properties-edit.component';
 
 const appRoutes: Routes = [
   {
@@ -14,6 +15,10 @@ const appRoutes: Routes = [
   {
     path: 'properties/:id',
     component: PropertiesViewComponent
+  },
+  {
+    path: 'properties/:id',
+    component: PropertiesEditComponent
   }
 ];
 
@@ -24,7 +29,8 @@ const appRoutes: Routes = [
   ],
   declarations: [
     PropertiesComponent,
-    PropertiesViewComponent
+    PropertiesViewComponent,
+    PropertiesEditComponent
   ],
   providers: [
     AppHttpService

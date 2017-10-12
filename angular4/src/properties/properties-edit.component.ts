@@ -6,7 +6,7 @@ import { AppHttpService } from '../app/app-http.service';
   templateUrl: '/properties-edit.component.html'
 })
 
-export class PropertiesViewComponent {
+export class PropertiesEditComponent {
 
   public propertie: any = {};
   public propertieType: any = {};
