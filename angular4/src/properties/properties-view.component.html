@@ -1,0 +1,27 @@
+<h3>Produtos</h3>
+
+<a href="" class="btn btn-primary">Novo Produto</a>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Titulo</th>
+      <th>Descricao</th>
+      <th>Tipo de Imovel</th>
+      <th>Bairro</th>
+      <th>Valor</th>
+      <th>Acao</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{propertie.id}}</td>
+      <td>{{propertie.title}}</td>
+      <td>{{propertie.description}}</td>
+      <td>{{propertieType.title}}</td>
+      <td>{{propertieDistrict.title}}</td>
+      <td>R$ {{propertie.value}}</td>
+    </tr>
+  </tbody>
+</table>

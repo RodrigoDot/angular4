@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { AppHttpService } from '../app/app-http.service';
 
 @Component({
-  templateUrl: '/properties-view.component.html'
+  templateUrl: '/properties-edit.component.html'
 })
 
 export class PropertiesViewComponent {
