@@ -3,10 +3,10 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { AppHttpService } from '../app/app-http.service';
 
 @Component({
-  templateUrl: '/properties-edit.component.html'
+  templateUrl: '/properties-add.component.html'
 })
 
-export class PropertiesEditComponent {
+export class PropertiesAddComponent {
 
   public propertie: any = {};
   public propertieId: any = {};
@@ -19,23 +19,8 @@ export class PropertiesEditComponent {
 
   }
 
-  ngOnInit() {
-    this.route.params
-      .subscribe((params: any) => {
-        this.view(params.id);
-      });
-  }
-
-  view(id: number) {
-    this.httpService.builder('properties')
-    .view(id)
-    .then((res) => {
-      this.propertieId = id;
-      this.propertie = res.data.attributes;
-    })
-  }
-
   save() {
+    
     let data = {
       title: this.propertie.title,
       description: this.propertie.description,
@@ -43,7 +28,7 @@ export class PropertiesEditComponent {
     };
 
     this.httpService.builder('properties')
-      .update(this.propertieId, data)
+      .create(data)
       .then(() => {
         this.router.navigate(['/properties/' + this.propertieId]);
       })

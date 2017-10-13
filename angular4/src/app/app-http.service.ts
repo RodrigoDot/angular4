@@ -51,4 +51,58 @@ export class AppHttpService {
       })
   }
 
+  update(id: number, data: any) {
+    let url = this.url + '/' +  id;
+
+    let myHeaders = new Headers({
+      'Accept': 'application/vnd.api+json'
+    });
+
+    let options = new RequestOptions({
+        headers: myHeaders
+    });
+
+    return this.http.put(url, data, options)
+      .toPromise()
+      .then((res) => {
+        return res.json() || {};
+      })
+  }
+
+  create(data: any) {
+    let url = this.url;
+
+    let myHeaders = new Headers({
+      'Accept': 'application/vnd.api+json'
+    });
+
+    let options = new RequestOptions({
+        headers: myHeaders
+    });
+
+    return this.http.post(url, data, options)
+      .toPromise()
+      .then((res) => {
+        return res.json() || {};
+      })
+  }
+
+  delete(id: number) {
+    let url = this.url + '/' +  id;
+
+    let myHeaders = new Headers({
+      'Accept': 'application/vnd.api+json'
+    });
+
+    let options = new RequestOptions({
+        headers: myHeaders
+    });
+
+    return this.http.delete(url, options)
+      .toPromise()
+      .then((res) => {
+        return res.json() || {};
+      })
+  }
+
 }

@@ -8,6 +8,7 @@ import { AppHttpService } from '../app/app-http.service';
 
 export class PropertiesViewComponent {
 
+  public propertieId: any = {};
   public propertie: any = {};
   public propertieType: any = {};
   public propertieDistrict: any = {};
@@ -30,6 +31,7 @@ export class PropertiesViewComponent {
     this.httpService.builder('properties')
     .view(id)
     .then((res) => {
+      this.propertieId = id;
       this.propertie = res.data.attributes;
       this.propertieType = res.included[0].attributes;
       this.propertieDistrict = res.included[1].attributes;
